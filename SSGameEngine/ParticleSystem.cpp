@@ -66,16 +66,16 @@ void ParticleSystem::update(int timePassed) {
 }
 //static float angle = 0.0f;
 void ParticleSystem::render() {
-//    //angle += 50.0f;
-//    glPushMatrix();
-//    //glRotatef(angle * 3.14/180, 0.0f, 0.0f, 0.0f);
-//    
-//    for (int i = 0; i < TOTAL_PARTICLES; i++) {
-//        Particle &p = particles[i];
-//        //cube.render(p.center, 0.1f);
-//        cube.render(p.center, 0.5f, p.color);
-//    }
-//    glPopMatrix();
+    //angle += 50.0f;
+    glPushMatrix();
+    //glRotatef(angle * 3.14/180, 0.0f, 0.0f, 0.0f);
     
-    model.render(SSPointMake(0.0f, 0.0f, 0.0f), 1.0f);
+    for (int i = 0; i < TOTAL_PARTICLES; i++) {
+        Particle &p = particles[i];
+        //cube.render(p.center, 0.1f);
+        cube.render(p.center, 0.5f, p.color);
+    }
+    glPopMatrix();
+    
+//    model.render(SSPointMake(0.0f, 0.0f, 0.0f), 1.0f);
 }
