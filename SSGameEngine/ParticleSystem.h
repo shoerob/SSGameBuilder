@@ -34,8 +34,8 @@ namespace SoftShoe {
             ParticleSystem();
             ~ParticleSystem();
             
-            void update(int timePassed);
-            void render();
+            void Update(int timePassed);
+            void Render();
             
             Cube cube;
             Model model;

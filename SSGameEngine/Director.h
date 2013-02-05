@@ -22,10 +22,13 @@ namespace SoftShoe {
             Director();
             ~Director();
             
-            void setScene(Scene *scene);
+            void SetScene(Scene *scene);
             
-            void update();
-            void render();
+            void Setup();
+            void Setup2d();
+            void SetViewportSize(int w, int h);
+            void Update();
+            void Render();
             
             private:
             Scene *scene;

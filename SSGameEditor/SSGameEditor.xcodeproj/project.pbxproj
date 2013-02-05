@@ -20,6 +20,7 @@
 		8555E09E167E4FB900F17419 /* SSGameEditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8555E09D167E4FB900F17419 /* SSGameEditorTests.m */; };
 		85C4F7231693D9D600FCC9F0 /* SSGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85C4F7221693D9D600FCC9F0 /* SSGLView.mm */; };
 		85C4F72A1693DD4600FCC9F0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C4F7291693DD4600FCC9F0 /* OpenGL.framework */; };
+		85D2C1FE16C0D2D30064902D /* SSGLView2d.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85D2C1FD16C0D2D30064902D /* SSGLView2d.mm */; };
 		EC5F079716B9EA0C00F2F2BC /* teapot in Resources */ = {isa = PBXBuildFile; fileRef = EC5F079616B9EA0C00F2F2BC /* teapot */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,8 @@
 		85C4F7211693D9D600FCC9F0 /* SSGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSGLView.h; path = SSGameEditor/SSGLView.h; sourceTree = "<group>"; };
 		85C4F7221693D9D600FCC9F0 /* SSGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SSGLView.mm; path = SSGameEditor/SSGLView.mm; sourceTree = "<group>"; };
 		85C4F7291693DD4600FCC9F0 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		85D2C1FC16C0D2D30064902D /* SSGLView2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSGLView2d.h; path = SSGameEditor/SSGLView2d.h; sourceTree = "<group>"; };
+		85D2C1FD16C0D2D30064902D /* SSGLView2d.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SSGLView2d.mm; path = SSGameEditor/SSGLView2d.mm; sourceTree = "<group>"; };
 		EC5F079616B9EA0C00F2F2BC /* teapot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = teapot; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +206,8 @@
 				EC5F079616B9EA0C00F2F2BC /* teapot */,
 				85C4F7211693D9D600FCC9F0 /* SSGLView.h */,
 				85C4F7221693D9D600FCC9F0 /* SSGLView.mm */,
+				85D2C1FC16C0D2D30064902D /* SSGLView2d.h */,
+				85D2C1FD16C0D2D30064902D /* SSGLView2d.mm */,
 			);
 			name = SSGameEngineExtensions;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 				8555E080167E4FB900F17419 /* main.m in Sources */,
 				8555E087167E4FB900F17419 /* SSAppDelegate.m in Sources */,
 				85C4F7231693D9D600FCC9F0 /* SSGLView.mm in Sources */,
+				85D2C1FE16C0D2D30064902D /* SSGLView2d.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

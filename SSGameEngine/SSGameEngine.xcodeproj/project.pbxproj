@@ -14,6 +14,8 @@
 		8555E0D81684491500F17419 /* Scene.h in Headers */ = {isa = PBXBuildFile; fileRef = 8555E0D61684491500F17419 /* Scene.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		855A4B8A16AB1A6300C97E71 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 855A4B8816AB1A6300C97E71 /* Actor.cpp */; };
 		855A4B8B16AB1A6300C97E71 /* Actor.h in Headers */ = {isa = PBXBuildFile; fileRef = 855A4B8916AB1A6300C97E71 /* Actor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85D2C20116C0D42E0064902D /* TileMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85D2C1FF16C0D42E0064902D /* TileMap.cpp */; };
+		85D2C20216C0D42E0064902D /* TileMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 85D2C20016C0D42E0064902D /* TileMap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85DAB5D316AA7CB50048BF4D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DAB5D216AA7CB50048BF4D /* OpenGL.framework */; };
 		EC084D5216B349E600885B21 /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC084D5016B349E600885B21 /* Cube.cpp */; };
 		EC084D5316B349E600885B21 /* Cube.h in Headers */ = {isa = PBXBuildFile; fileRef = EC084D5116B349E600885B21 /* Cube.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -37,6 +39,8 @@
 		8555E0D61684491500F17419 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		855A4B8816AB1A6300C97E71 /* Actor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
 		855A4B8916AB1A6300C97E71 /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
+		85D2C1FF16C0D42E0064902D /* TileMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TileMap.cpp; sourceTree = "<group>"; };
+		85D2C20016C0D42E0064902D /* TileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileMap.h; sourceTree = "<group>"; };
 		85DAB5D216AA7CB50048BF4D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		EC084D5016B349E600885B21 /* Cube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
 		EC084D5116B349E600885B21 /* Cube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 				ECEEC4B116B5970B0035B041 /* ParticleSystem */,
 				ECEEC4AD16B596E90035B041 /* ParticleSystem.cpp */,
 				ECEEC4AE16B596E90035B041 /* ParticleSystem.h */,
+				85D2C1FF16C0D42E0064902D /* TileMap.cpp */,
+				85D2C20016C0D42E0064902D /* TileMap.h */,
 			);
 			name = Actors;
 			sourceTree = "<group>";
@@ -194,6 +200,7 @@
 				ECEEC4B316B598920035B041 /* SSCoreTypes.h in Headers */,
 				ECEF482616B869190031A38D /* Timer.h in Headers */,
 				EC5F079516B9E6F800F2F2BC /* Model.h in Headers */,
+				85D2C20216C0D42E0064902D /* TileMap.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +263,7 @@
 				ECEEC4B516B5A9830035B041 /* SSCoreTypes.cpp in Sources */,
 				ECEF482516B869190031A38D /* Timer.cpp in Sources */,
 				EC5F079416B9E6F800F2F2BC /* Model.cpp in Sources */,
+				85D2C20116C0D42E0064902D /* TileMap.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

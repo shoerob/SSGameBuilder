@@ -10,7 +10,7 @@
 #define __SSGameEngine__Scene__
 
 #include <iostream>
-#include <vector>
+#include <list>
 #include "Actor.h"
 
 namespace SoftShoe {
@@ -21,13 +21,18 @@ namespace SoftShoe {
             Scene();
             ~Scene();
           
-            virtual void onBeforeLoad();
-            virtual void onAfterLoad();
+            virtual void OnBeforeLoad();
+            virtual void OnAfterLoad();
                 
             // Scene Graph
-            void update(int timePassed);
-            void render();
-            std::vector<Actor*> actors;
+            void Update(int timePassed);
+            void Render();
+            
+            void AddActor(Actor *actor);
+            void RemoveActor(Actor *actor);
+            
+        protected:
+            std::list<Actor*> actors;
         };
         
     }

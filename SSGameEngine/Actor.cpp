@@ -13,7 +13,6 @@
 using namespace SoftShoe::GameEngine;
 
 Actor::Actor() {
-    //center = SSPointMake(0.0f, 0.0f, 0.0f);
     center.x = 0.0f;
     center.y = 0.0f;
     center.z = 0.0f;
@@ -22,11 +21,3 @@ Actor::Actor() {
 Actor::~Actor() {
     
 }
-
-//void Actor::update() {
-//    
-//}
-//
-//void Actor::render() {
-//    
-//}

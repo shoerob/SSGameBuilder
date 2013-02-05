@@ -21,19 +21,11 @@ Director::~Director() {
     //delete this->scene;
 }
 
-void Director::setScene(Scene *scene) {
+void Director::SetScene(Scene *scene) {
     this->scene = scene;
 }
 
-void Director::update() {
-    this->scene->update(timer.Update());
-}
-
-void Director::render() {
-    
-    glClearColor(0, 0, 0, 1);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    
+void Director::Setup() {    
     glMatrixMode( GL_PROJECTION );
     glLoadIdentity();
     gluPerspective(45, 1, 0.1, 1000);
@@ -41,17 +33,34 @@ void Director::render() {
               0, 0, 0,      // at
               0, 1.0, 0);   // up
     
-
+    
     glMatrixMode( GL_MODELVIEW );
+    glClearColor(0.0f, 0.0f, 0.0f, 1);
+    glEnable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    //glRotatef(45 * 3.14/180, 0.0f, 0.5f, 0.0f);
+}
 
-//    glLoadIdentity();
-    
-//    glEnable(GL_CULL_FACE);
+void Director::Setup2d() {
+    const int XSize = 640, YSize = 480;
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho(0, XSize, 0, YSize, 0, 1);
+    glMatrixMode(GL_MODELVIEW);
+    glClearColor(0.0f, 0.0f, 0.0f, 1);
+    glDisable(GL_DEPTH_TEST);
+}
 
-    this->scene->render();;
-    
+void Director::SetViewportSize(int w, int h) {
+    glViewport(0, 0, w, h);
+}
+
+void Director::Update() {
+    this->scene->Update(timer.Update());
+}
+
+void Director::Render() {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    this->scene->Render();
     glFlush();
 }

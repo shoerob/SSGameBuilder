@@ -20,22 +20,30 @@ Scene::~Scene() {
     
 }
 
-void Scene::onBeforeLoad() {
+void Scene::OnBeforeLoad() {
     
 }
 
-void Scene::onAfterLoad() {
+void Scene::OnAfterLoad() {
     
 }
 
-void Scene::update(int timePassed) {
-    for (std::vector<Actor*>::iterator it = actors.begin(); it != actors.end(); ++it) {
-        (*it)->update(timePassed);
+void Scene::Update(int timePassed) {
+    for (std::list<Actor*>::iterator it = actors.begin(); it != actors.end(); ++it) {
+        (*it)->Update(timePassed);
     }
 }
 
-void Scene::render() {
-    for (std::vector<Actor*>::iterator it = actors.begin(); it != actors.end(); ++it) {
-        (*it)->render();
+void Scene::Render() {
+    for (std::list<Actor*>::iterator it = actors.begin(); it != actors.end(); ++it) {
+        (*it)->Render();
     }
+}
+
+void Scene::AddActor(Actor *actor) {
+    this->actors.push_back(actor);
+}
+
+void Scene::RemoveActor(Actor *actor) {
+    this->actors.remove(actor);
 }

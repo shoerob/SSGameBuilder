@@ -18,6 +18,7 @@
 
 // Concrete Types
 #include "ParticleSystem.h"
+#include "TileMap.h"
 #include "Model.h"
 
 #endif

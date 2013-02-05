@@ -19,12 +19,12 @@ namespace SoftShoe {
             Actor();
             ~Actor();
             
-            virtual void update(int timePassed) = 0;
-            virtual void render() = 0;
+            virtual void Update(int timePassed) = 0;
+            virtual void Render() = 0;
             
             // Properties
-            void setCenter(SSPoint3F center) { this->center = center; };
-            SSPoint3F getCenter() { return this->center; };
+            void SetCenter(SSPoint3F center) { this->center = center; };
+            SSPoint3F GetCenter() { return this->center; };
             
         protected:
             SSPoint3F center;
