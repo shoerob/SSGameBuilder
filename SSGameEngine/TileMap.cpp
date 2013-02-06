@@ -32,11 +32,13 @@ void TileMap::Update(int timePassed) {
 }
 
 void TileMap::Render() {
-    glBegin(GL_POINTS);
-    for (int x = 0; x < xCnt; x++) {
-        for (int y = 0; y < yCnt; y++) {
-            glVertex2i(x * tileWidth, y * tileHeight);
-        }
+    glBegin(GL_LINE_STRIP);
+    for (int y = 0; y < yCnt; y++) {
+        for (int x = 0; x < xCnt; x++) {
+                glVertex2i(x * tileWidth, y * tileHeight);
+                glVertex2i(x * tileWidth + tileWidth, y * tileHeight);
+                glVertex2i(x * tileWidth + tileWidth, y * tileHeight + tileHeight);
+            }
     }
     glEnd();
 }
