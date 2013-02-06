@@ -9,6 +9,7 @@
 #include "Scene.h"
 #include <OpenGL/OpenGL.h>
 #include <OpenGL/gl.h>
+#include "Director.h"
 
 using namespace SoftShoe::GameEngine;
 
@@ -28,9 +29,9 @@ void Scene::OnAfterLoad() {
     
 }
 
-void Scene::Update(int timePassed) {
+void Scene::Update(Director &director, int timePassed) {
     for (std::list<Actor*>::iterator it = actors.begin(); it != actors.end(); ++it) {
-        (*it)->Update(timePassed);
+        (*it)->Update(director, timePassed);
     }
 }
 

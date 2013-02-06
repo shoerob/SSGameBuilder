@@ -18,7 +18,7 @@ ParticleSystem::~ParticleSystem() {
 
 }
 
-void ParticleSystem::Update(int timePassed) {
+void ParticleSystem::Update(Director &director, int timePassed) {
     static SSColorRGBA color = SSColorMake(1.0f, 0.0f, 0.0f, 1.0f);
     static int colorCycle = 0;
     colorCycle++;

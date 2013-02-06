@@ -14,12 +14,15 @@
 
 namespace SoftShoe {
     namespace GameEngine {
+        
+        class Director;
+        
         class Actor {
         public:
             Actor();
             ~Actor();
             
-            virtual void Update(int timePassed) = 0;
+            virtual void Update(Director &director, int timePassed) = 0;
             virtual void Render() = 0;
             
             // Properties

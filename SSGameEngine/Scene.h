@@ -16,6 +16,8 @@
 namespace SoftShoe {
     namespace GameEngine {
         
+        class Director;
+        
         class Scene {
         public:
             Scene();
@@ -25,7 +27,7 @@ namespace SoftShoe {
             virtual void OnAfterLoad();
                 
             // Scene Graph
-            void Update(int timePassed);
+            void Update(Director &director, int timePassed);
             void Render();
             
             void AddActor(Actor *actor);

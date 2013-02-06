@@ -17,6 +17,8 @@
 		85D2C20116C0D42E0064902D /* TileMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85D2C1FF16C0D42E0064902D /* TileMap.cpp */; };
 		85D2C20216C0D42E0064902D /* TileMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 85D2C20016C0D42E0064902D /* TileMap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85DAB5D316AA7CB50048BF4D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DAB5D216AA7CB50048BF4D /* OpenGL.framework */; };
+		85FC28E616C2096C00C5591E /* InputService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85FC28E416C2096C00C5591E /* InputService.cpp */; };
+		85FC28E716C2096C00C5591E /* InputService.h in Headers */ = {isa = PBXBuildFile; fileRef = 85FC28E516C2096C00C5591E /* InputService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC084D5216B349E600885B21 /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC084D5016B349E600885B21 /* Cube.cpp */; };
 		EC084D5316B349E600885B21 /* Cube.h in Headers */ = {isa = PBXBuildFile; fileRef = EC084D5116B349E600885B21 /* Cube.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC5F079416B9E6F800F2F2BC /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC5F079216B9E6F800F2F2BC /* Model.cpp */; };
@@ -42,6 +44,8 @@
 		85D2C1FF16C0D42E0064902D /* TileMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TileMap.cpp; sourceTree = "<group>"; };
 		85D2C20016C0D42E0064902D /* TileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileMap.h; sourceTree = "<group>"; };
 		85DAB5D216AA7CB50048BF4D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		85FC28E416C2096C00C5591E /* InputService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputService.cpp; sourceTree = "<group>"; };
+		85FC28E516C2096C00C5591E /* InputService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputService.h; sourceTree = "<group>"; };
 		EC084D5016B349E600885B21 /* Cube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
 		EC084D5116B349E600885B21 /* Cube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
 		EC5F079216B9E6F800F2F2BC /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 		8555E0C7167E508900F17419 /* Input */ = {
 			isa = PBXGroup;
 			children = (
+				85FC28E416C2096C00C5591E /* InputService.cpp */,
+				85FC28E516C2096C00C5591E /* InputService.h */,
 			);
 			name = Input;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 				ECEF482616B869190031A38D /* Timer.h in Headers */,
 				EC5F079516B9E6F800F2F2BC /* Model.h in Headers */,
 				85D2C20216C0D42E0064902D /* TileMap.h in Headers */,
+				85FC28E716C2096C00C5591E /* InputService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +271,7 @@
 				ECEF482516B869190031A38D /* Timer.cpp in Sources */,
 				EC5F079416B9E6F800F2F2BC /* Model.cpp in Sources */,
 				85D2C20116C0D42E0064902D /* TileMap.cpp in Sources */,
+				85FC28E616C2096C00C5591E /* InputService.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

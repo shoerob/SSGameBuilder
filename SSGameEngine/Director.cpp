@@ -7,18 +7,19 @@
 //
 
 #include "Director.h"
+#include "Scene.h"
 #include <OpenGL/OpenGL.h>
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
 
 using namespace SoftShoe::GameEngine;
+using namespace SoftShoe::Input;
 
 Director::Director() : timer() {
     srand ( (int) time(NULL) );
 }
 
 Director::~Director() {
-    //delete this->scene;
 }
 
 void Director::SetScene(Scene *scene) {
@@ -56,11 +57,17 @@ void Director::SetViewportSize(int w, int h) {
 }
 
 void Director::Update() {
-    this->scene->Update(timer.Update());
+    this->scene->Update(*this, timer.Update());
 }
 
 void Director::Render() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     this->scene->Render();
     glFlush();
+}
+
+// Services
+InputService& Director::InputServiceInstance() {
+    static InputService instance;
+    return instance;
 }

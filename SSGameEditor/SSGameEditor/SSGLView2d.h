@@ -12,4 +12,5 @@
 @interface SSGLView2d : NSOpenGLView {
     NSTimer *pTimer;
 }
+
 @end

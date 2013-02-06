@@ -11,6 +11,9 @@
 
 #include "SSCoreTypes.h"
 
+// Systems
+//#include "InputService.h"
+
 // Primitive Types
 #include "Director.h"
 #include "Scene.h"
@@ -20,5 +23,8 @@
 #include "ParticleSystem.h"
 #include "TileMap.h"
 #include "Model.h"
+
+using namespace SoftShoe::Input;
+using namespace SoftShoe::GameEngine;
 
 #endif

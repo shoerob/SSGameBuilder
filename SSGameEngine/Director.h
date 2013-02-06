@@ -10,11 +10,14 @@
 #define __SSGameEngine__Director__
 
 #include <iostream>
-#include "Scene.h"
+#include "InputService.h"
 #include "Timer.h"
 
 namespace SoftShoe {
     namespace GameEngine {
+        
+        // forward class declarations
+        class Scene;
         
         class Director {
             
@@ -29,6 +32,9 @@ namespace SoftShoe {
             void SetViewportSize(int w, int h);
             void Update();
             void Render();
+            
+            // Services
+            Input::InputService& InputServiceInstance();
             
             private:
             Scene *scene;

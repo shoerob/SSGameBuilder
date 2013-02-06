@@ -23,10 +23,13 @@ namespace SoftShoe {
             void Setup(int tileWidth, int tileHeight, int xCnt, int yCnt);
             
             // Overrides
-            void Update(int timePassed);
+            void Update(Director &director, int timePassed);
             void Render();
             
         private:
+            int xHighlight = 0;
+            int yHighlight = 0;
+            
             int tileWidth = 0;
             int tileHeight = 0;
             int xCnt = 0;
