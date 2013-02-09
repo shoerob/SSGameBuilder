@@ -12,7 +12,7 @@
 #include <iostream>
 
 namespace SoftShoe {
-    namespace Input {
+    namespace Services {
         
         class InputService {
         public:

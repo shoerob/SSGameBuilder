@@ -22,7 +22,7 @@ static SoftShoe::GameEngine::Director s_director;
         SoftShoe::GameEngine::Scene *scene = new SoftShoe::GameEngine::Scene();
 
         SoftShoe::GameEngine::ParticleSystem *particleSystem = new SoftShoe::GameEngine::ParticleSystem();
-        particleSystem->SetCenter(SSPointMake(0.0f, -25.0f, 0.0f));
+        particleSystem->SetCenter(SSPointMake(0.0f, -25.0f, 100.0f));
         scene->AddActor(particleSystem);
 
         s_director.SetScene(scene);

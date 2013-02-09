@@ -16,6 +16,7 @@ namespace SoftShoe {
     namespace GameEngine {
         
         class Director;
+        class Scene;
         
         class Actor {
         public:
@@ -29,8 +30,11 @@ namespace SoftShoe {
             void SetCenter(SSPoint3F center) { this->center = center; };
             SSPoint3F GetCenter() { return this->center; };
             
+            Scene *GetScene() { return this->scene; };
+            
         protected:
             SSPoint3F center;
+            Scene *scene;
         };
     }
 }

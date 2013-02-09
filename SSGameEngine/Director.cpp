@@ -13,7 +13,7 @@
 #include <OpenGL/glu.h>
 
 using namespace SoftShoe::GameEngine;
-using namespace SoftShoe::Input;
+using namespace SoftShoe::Services;
 
 Director::Director() : timer() {
     srand ( (int) time(NULL) );
@@ -30,8 +30,8 @@ void Director::Setup() {
     glMatrixMode( GL_PROJECTION );
     glLoadIdentity();
     gluPerspective(45, 1, 0.1, 1000);
-    gluLookAt(0, 0, -100.0,    // eye
-              0, 0, 0,      // at
+    gluLookAt(0, 0, 0,    // eye
+              0, 0, 1.0,      // at
               0, 1.0, 0);   // up
     
     
@@ -67,6 +67,11 @@ void Director::Render() {
 }
 
 // Services
+NotificationService& Director::NotificationServiceInstance() {
+    static NotificationService instance;
+    return instance;
+}
+
 InputService& Director::InputServiceInstance() {
     static InputService instance;
     return instance;

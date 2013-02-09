@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		851ADA4C16C5ED4A0035932F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851ADA4B16C5ED4A0035932F /* Cocoa.framework */; };
+		851ADA5616C5ED4A0035932F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 851ADA5416C5ED4A0035932F /* InfoPlist.strings */; };
+		851ADA5816C5ED4A0035932F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 851ADA5716C5ED4A0035932F /* main.m */; };
+		851ADA5C16C5ED4A0035932F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 851ADA5A16C5ED4A0035932F /* Credits.rtf */; };
+		851ADA5F16C5ED4A0035932F /* SSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 851ADA5E16C5ED4A0035932F /* SSAppDelegate.m */; };
+		851ADA6216C5ED4B0035932F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 851ADA6016C5ED4B0035932F /* MainMenu.xib */; };
+		851ADA6F16C5EDA50035932F /* libSSGameEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 851ADA6E16C5ED9F0035932F /* libSSGameEngine.a */; };
+		851ADA7116C5EDB80035932F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851ADA7016C5EDB80035932F /* OpenGL.framework */; };
+		851ADA7416C5EE0C0035932F /* SSGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 851ADA7316C5EE0C0035932F /* SSGLView.mm */; };
+		851ADA7816C5F06F0035932F /* SSGun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 851ADA7616C5F06F0035932F /* SSGun.cpp */; };
+		851ADA7B16C5F26E0035932F /* SSMainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 851ADA7916C5F26E0035932F /* SSMainScene.cpp */; };
+		856AF7BD16C6EEA10073F223 /* SSBullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 856AF7BB16C6EEA10073F223 /* SSBullet.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		851ADA6D16C5ED9F0035932F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 851ADA6916C5ED9F0035932F /* SSGameEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8555E0B2167E500000F17419;
+			remoteInfo = SSGameEngine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		851ADA4816C5ED4A0035932F /* SSMacGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSMacGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		851ADA4B16C5ED4A0035932F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		851ADA4E16C5ED4A0035932F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		851ADA4F16C5ED4A0035932F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		851ADA5016C5ED4A0035932F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		851ADA5316C5ED4A0035932F /* SSMacGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SSMacGame-Info.plist"; sourceTree = "<group>"; };
+		851ADA5516C5ED4A0035932F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		851ADA5716C5ED4A0035932F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		851ADA5916C5ED4A0035932F /* SSMacGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SSMacGame-Prefix.pch"; sourceTree = "<group>"; };
+		851ADA5B16C5ED4A0035932F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		851ADA5D16C5ED4A0035932F /* SSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSAppDelegate.h; sourceTree = "<group>"; };
+		851ADA5E16C5ED4A0035932F /* SSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSAppDelegate.m; sourceTree = "<group>"; };
+		851ADA6116C5ED4B0035932F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		851ADA6916C5ED9F0035932F /* SSGameEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSGameEngine.xcodeproj; path = ../SSGameEngine/SSGameEngine.xcodeproj; sourceTree = "<group>"; };
+		851ADA7016C5EDB80035932F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		851ADA7216C5EE0C0035932F /* SSGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSGLView.h; sourceTree = "<group>"; };
+		851ADA7316C5EE0C0035932F /* SSGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SSGLView.mm; sourceTree = "<group>"; };
+		851ADA7616C5F06F0035932F /* SSGun.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SSGun.cpp; sourceTree = "<group>"; };
+		851ADA7716C5F06F0035932F /* SSGun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSGun.h; sourceTree = "<group>"; };
+		851ADA7916C5F26E0035932F /* SSMainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SSMainScene.cpp; sourceTree = "<group>"; };
+		851ADA7A16C5F26E0035932F /* SSMainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSMainScene.h; sourceTree = "<group>"; };
+		856AF7BB16C6EEA10073F223 /* SSBullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SSBullet.cpp; sourceTree = "<group>"; };
+		856AF7BC16C6EEA10073F223 /* SSBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSBullet.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		851ADA4516C5ED4A0035932F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				851ADA7116C5EDB80035932F /* OpenGL.framework in Frameworks */,
+				851ADA6F16C5EDA50035932F /* libSSGameEngine.a in Frameworks */,
+				851ADA4C16C5ED4A0035932F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		851ADA3F16C5ED4A0035932F = {
+			isa = PBXGroup;
+			children = (
+				851ADA6816C5ED810035932F /* References */,
+				851ADA7516C5F05D0035932F /* Game */,
+				851ADA5116C5ED4A0035932F /* SSMacGame */,
+				851ADA4A16C5ED4A0035932F /* Frameworks */,
+				851ADA4916C5ED4A0035932F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		851ADA4916C5ED4A0035932F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				851ADA4816C5ED4A0035932F /* SSMacGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		851ADA4A16C5ED4A0035932F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				851ADA7016C5EDB80035932F /* OpenGL.framework */,
+				851ADA4B16C5ED4A0035932F /* Cocoa.framework */,
+				851ADA4D16C5ED4A0035932F /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		851ADA4D16C5ED4A0035932F /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				851ADA4E16C5ED4A0035932F /* AppKit.framework */,
+				851ADA4F16C5ED4A0035932F /* CoreData.framework */,
+				851ADA5016C5ED4A0035932F /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		851ADA5116C5ED4A0035932F /* SSMacGame */ = {
+			isa = PBXGroup;
+			children = (
+				851ADA7216C5EE0C0035932F /* SSGLView.h */,
+				851ADA7316C5EE0C0035932F /* SSGLView.mm */,
+				851ADA5D16C5ED4A0035932F /* SSAppDelegate.h */,
+				851ADA5E16C5ED4A0035932F /* SSAppDelegate.m */,
+				851ADA6016C5ED4B0035932F /* MainMenu.xib */,
+				851ADA5216C5ED4A0035932F /* Supporting Files */,
+			);
+			path = SSMacGame;
+			sourceTree = "<group>";
+		};
+		851ADA5216C5ED4A0035932F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				851ADA5316C5ED4A0035932F /* SSMacGame-Info.plist */,
+				851ADA5416C5ED4A0035932F /* InfoPlist.strings */,
+				851ADA5716C5ED4A0035932F /* main.m */,
+				851ADA5916C5ED4A0035932F /* SSMacGame-Prefix.pch */,
+				851ADA5A16C5ED4A0035932F /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		851ADA6816C5ED810035932F /* References */ = {
+			isa = PBXGroup;
+			children = (
+				851ADA6916C5ED9F0035932F /* SSGameEngine.xcodeproj */,
+			);
+			name = References;
+			sourceTree = "<group>";
+		};
+		851ADA6A16C5ED9F0035932F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				851ADA6E16C5ED9F0035932F /* libSSGameEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		851ADA7516C5F05D0035932F /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				856AF7BB16C6EEA10073F223 /* SSBullet.cpp */,
+				856AF7BC16C6EEA10073F223 /* SSBullet.h */,
+				851ADA7616C5F06F0035932F /* SSGun.cpp */,
+				851ADA7716C5F06F0035932F /* SSGun.h */,
+				851ADA7916C5F26E0035932F /* SSMainScene.cpp */,
+				851ADA7A16C5F26E0035932F /* SSMainScene.h */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		851ADA4716C5ED4A0035932F /* SSMacGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 851ADA6516C5ED4B0035932F /* Build configuration list for PBXNativeTarget "SSMacGame" */;
+			buildPhases = (
+				851ADA4416C5ED4A0035932F /* Sources */,
+				851ADA4516C5ED4A0035932F /* Frameworks */,
+				851ADA4616C5ED4A0035932F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSMacGame;
+			productName = SSMacGame;
+			productReference = 851ADA4816C5ED4A0035932F /* SSMacGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		851ADA4016C5ED4A0035932F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = SoftShoe;
+			};
+			buildConfigurationList = 851ADA4316C5ED4A0035932F /* Build configuration list for PBXProject "SSMacGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 851ADA3F16C5ED4A0035932F;
+			productRefGroup = 851ADA4916C5ED4A0035932F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 851ADA6A16C5ED9F0035932F /* Products */;
+					ProjectRef = 851ADA6916C5ED9F0035932F /* SSGameEngine.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				851ADA4716C5ED4A0035932F /* SSMacGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		851ADA6E16C5ED9F0035932F /* libSSGameEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSSGameEngine.a;
+			remoteRef = 851ADA6D16C5ED9F0035932F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		851ADA4616C5ED4A0035932F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				851ADA5616C5ED4A0035932F /* InfoPlist.strings in Resources */,
+				851ADA5C16C5ED4A0035932F /* Credits.rtf in Resources */,
+				851ADA6216C5ED4B0035932F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		851ADA4416C5ED4A0035932F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				851ADA5816C5ED4A0035932F /* main.m in Sources */,
+				851ADA5F16C5ED4A0035932F /* SSAppDelegate.m in Sources */,
+				851ADA7416C5EE0C0035932F /* SSGLView.mm in Sources */,
+				851ADA7816C5F06F0035932F /* SSGun.cpp in Sources */,
+				851ADA7B16C5F26E0035932F /* SSMainScene.cpp in Sources */,
+				856AF7BD16C6EEA10073F223 /* SSBullet.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		851ADA5416C5ED4A0035932F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				851ADA5516C5ED4A0035932F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		851ADA5A16C5ED4A0035932F /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				851ADA5B16C5ED4A0035932F /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		851ADA6016C5ED4B0035932F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				851ADA6116C5ED4B0035932F /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		851ADA6316C5ED4B0035932F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		851ADA6416C5ED4B0035932F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		851ADA6616C5ED4B0035932F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSMacGame/SSMacGame-Prefix.pch";
+				HEADER_SEARCH_PATHS = /$CONFIGURATION_BUILD_DIR/Headers;
+				INFOPLIST_FILE = "SSMacGame/SSMacGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		851ADA6716C5ED4B0035932F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSMacGame/SSMacGame-Prefix.pch";
+				HEADER_SEARCH_PATHS = /$CONFIGURATION_BUILD_DIR/Headers;
+				INFOPLIST_FILE = "SSMacGame/SSMacGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		851ADA4316C5ED4A0035932F /* Build configuration list for PBXProject "SSMacGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				851ADA6316C5ED4B0035932F /* Debug */,
+				851ADA6416C5ED4B0035932F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		851ADA6516C5ED4B0035932F /* Build configuration list for PBXNativeTarget "SSMacGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				851ADA6616C5ED4B0035932F /* Debug */,
+				851ADA6716C5ED4B0035932F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 851ADA4016C5ED4A0035932F /* Project object */;
+}

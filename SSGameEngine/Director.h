@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "InputService.h"
+#include "NotificationService.h"
 #include "Timer.h"
 
 namespace SoftShoe {
@@ -34,7 +35,8 @@ namespace SoftShoe {
             void Render();
             
             // Services
-            Input::InputService& InputServiceInstance();
+            Services::NotificationService& NotificationServiceInstance();
+            Services::InputService& InputServiceInstance();
             
             private:
             Scene *scene;

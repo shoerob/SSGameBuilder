@@ -8,7 +8,7 @@
 
 #include "InputService.h"
 
-using namespace SoftShoe::Input;
+using namespace SoftShoe::Services;
 
 InputService::InputService() {
     mouseX = 0;

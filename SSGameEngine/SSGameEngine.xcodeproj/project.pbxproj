@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851ADA2D16C5E4770035932F /* NotificationService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 851ADA2B16C5E4770035932F /* NotificationService.cpp */; };
+		851ADA2E16C5E4770035932F /* NotificationService.h in Headers */ = {isa = PBXBuildFile; fileRef = 851ADA2C16C5E4770035932F /* NotificationService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8555E0C4167E506200F17419 /* SSGameEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 8555E0C3167E506200F17419 /* SSGameEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8555E0CC167E50F700F17419 /* Director.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8555E0CA167E50F700F17419 /* Director.cpp */; };
 		8555E0CD167E50F700F17419 /* Director.h in Headers */ = {isa = PBXBuildFile; fileRef = 8555E0CB167E50F700F17419 /* Director.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		851ADA2B16C5E4770035932F /* NotificationService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NotificationService.cpp; sourceTree = "<group>"; };
+		851ADA2C16C5E4770035932F /* NotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		8555E0B2167E500000F17419 /* libSSGameEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSSGameEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8555E0C3167E506200F17419 /* SSGameEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSGameEngine.h; path = SSGameEngine/SSGameEngine.h; sourceTree = "<group>"; };
 		8555E0CA167E50F700F17419 /* Director.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Director.cpp; sourceTree = "<group>"; };
@@ -80,6 +84,17 @@
 			name = Utility;
 			sourceTree = "<group>";
 		};
+		851ADA2A16C5E3CA0035932F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				85FC28E416C2096C00C5591E /* InputService.cpp */,
+				85FC28E516C2096C00C5591E /* InputService.h */,
+				851ADA2B16C5E4770035932F /* NotificationService.cpp */,
+				851ADA2C16C5E4770035932F /* NotificationService.h */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		8555E0A7167E500000F17419 = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +102,7 @@
 				8508B8AA16853DB4004DC8B8 /* Utility */,
 				8555E0C5167E507B00F17419 /* Graphics */,
 				8555E0C6167E508400F17419 /* Sound */,
-				8555E0C7167E508900F17419 /* Input */,
+				851ADA2A16C5E3CA0035932F /* Services */,
 				8555E0DA1684491F00F17419 /* GameEngine */,
 				ECEEC4B216B598920035B041 /* SSCoreTypes.h */,
 				ECEEC4B416B5A9830035B041 /* SSCoreTypes.cpp */,
@@ -117,15 +132,6 @@
 			children = (
 			);
 			name = Sound;
-			sourceTree = "<group>";
-		};
-		8555E0C7167E508900F17419 /* Input */ = {
-			isa = PBXGroup;
-			children = (
-				85FC28E416C2096C00C5591E /* InputService.cpp */,
-				85FC28E516C2096C00C5591E /* InputService.h */,
-			);
-			name = Input;
 			sourceTree = "<group>";
 		};
 		8555E0C8167E508F00F17419 /* Common */ = {
@@ -206,6 +212,7 @@
 				ECEEC4B316B598920035B041 /* SSCoreTypes.h in Headers */,
 				ECEF482616B869190031A38D /* Timer.h in Headers */,
 				EC5F079516B9E6F800F2F2BC /* Model.h in Headers */,
+				851ADA2E16C5E4770035932F /* NotificationService.h in Headers */,
 				85D2C20216C0D42E0064902D /* TileMap.h in Headers */,
 				85FC28E716C2096C00C5591E /* InputService.h in Headers */,
 			);
@@ -272,6 +279,7 @@
 				EC5F079416B9E6F800F2F2BC /* Model.cpp in Sources */,
 				85D2C20116C0D42E0064902D /* TileMap.cpp in Sources */,
 				85FC28E616C2096C00C5591E /* InputService.cpp in Sources */,
+				851ADA2D16C5E4770035932F /* NotificationService.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

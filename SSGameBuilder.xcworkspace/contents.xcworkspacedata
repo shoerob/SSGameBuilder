@@ -5,6 +5,9 @@
       location = "group:SSMobileGame/SSMobileGame.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:SSMacGame/SSMacGame.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SSGameEditor/SSGameEditor.xcodeproj">
    </FileRef>
    <FileRef

@@ -1,39 +1,32 @@
 //
-//  SSGLView2d.m
+//  SSGLView.m
 //  SSGameEditor
 //
-//  Created by Robert Shoemate on 2/4/13.
+//  Created by Robert Shoemate on 1/1/13.
 //  Copyright (c) 2013 Robert Shoemate. All rights reserved.
 //
 
-#import "SSGLView2d.h"
+#import "SSGLView.h"
 #import <OpenGL/OpenGL.h>
 #import <OpenGL/glu.h>
-#import <Cocoa/Cocoa.h>
+#include "SSMainScene.h"
 
-static SoftShoe::GameEngine::Director s_director2d;
+static SoftShoe::GameEngine::Director s_director;
 
+@interface SSGLView ()
 
-@interface SSGLView2d ()
-
+@property SSMainScene mainScene;
 @property (strong, nonatomic) NSTrackingArea *trackingArea;
 
 @end
 
-@implementation SSGLView2d
+@implementation SSGLView
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        s_director2d = SoftShoe::GameEngine::Director();
-        
-        SoftShoe::GameEngine::Scene *scene = new SoftShoe::GameEngine::Scene();
-
-        SoftShoe::GameEngine::TileMap *tileMap = new SoftShoe::GameEngine::TileMap();
-        tileMap->Setup(16, 16, 40, 30);
-        scene->AddActor(tileMap);
-        
-        s_director2d.SetScene(scene);
+        s_director = SoftShoe::GameEngine::Director();
+        s_director.SetScene(&self->_mainScene);
     }
     
     return self;
@@ -49,7 +42,7 @@ static SoftShoe::GameEngine::Director s_director2d;
 }
 
 - (void)idle:(NSTimer *)pTimer {
-    s_director2d.Update();
+    s_director.Update();
     [self drawRect:[self bounds]];
 }
 
@@ -57,7 +50,7 @@ static SoftShoe::GameEngine::Director s_director2d;
 - (void)prepareOpenGL {
     pTimer = [NSTimer timerWithTimeInterval:(1.0/60.0) target:self selector:@selector(idle:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop]addTimer:pTimer forMode: NSDefaultRunLoopMode];
-    s_director2d.Setup2d();
+    s_director.Setup();
 }
 
 - (void)clearGLContext {
@@ -66,15 +59,13 @@ static SoftShoe::GameEngine::Director s_director2d;
 
 - (void)reshape {
     NSRect rect = [self bounds];
-    s_director2d.SetViewportSize(rect.size.width, rect.size.height);
-    
-
+    s_director.SetViewportSize(rect.size.width, rect.size.height);
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
     [self.openGLContext makeCurrentContext];
     [self reshape];
-    s_director2d.Render();
+    s_director.Render();
 }
 
 #pragma mark - Tracking
@@ -92,7 +83,7 @@ static SoftShoe::GameEngine::Director s_director2d;
 - (void)mouseMoved:(NSEvent *)theEvent {
     NSPoint eyeCenter = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     NSLog(@"%@", NSStringFromPoint(eyeCenter));
-    s_director2d.InputServiceInstance().MouseMoved(eyeCenter.x * 640.0f / self.bounds.size.width, eyeCenter.y * 480.0f / self.bounds.size.height);
+    s_director.InputServiceInstance().MouseMoved(eyeCenter.x * 640.0f / self.bounds.size.width, eyeCenter.y * 480.0f / self.bounds.size.height);
 }
 
 @end

@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'SSMacGame' target in the 'SSMacGame' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

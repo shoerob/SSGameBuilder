@@ -19,12 +19,14 @@
 #include "Scene.h"
 #include "Actor.h"
 
+#include "Cube.h"
+
 // Concrete Types
 #include "ParticleSystem.h"
 #include "TileMap.h"
 #include "Model.h"
 
-using namespace SoftShoe::Input;
+using namespace SoftShoe::Services;
 using namespace SoftShoe::GameEngine;
 
 #endif
