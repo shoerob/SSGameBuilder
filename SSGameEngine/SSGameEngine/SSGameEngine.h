@@ -13,6 +13,7 @@
 
 // Systems
 //#include "InputService.h"
+#include "NotificationService.h"
 
 // Primitive Types
 #include "Director.h"

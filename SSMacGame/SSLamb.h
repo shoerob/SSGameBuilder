@@ -21,8 +21,12 @@ public:
     void Update(Director &director, int timePassed);
     void Render();
     
+    // Setup
+    void StartFromLeft(int waitMs);
+    
 private:
     Cube cube;
+    int waitMs; // amount of time to wait before appearing
     
 };
 

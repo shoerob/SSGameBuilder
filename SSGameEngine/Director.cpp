@@ -24,6 +24,11 @@ Director::~Director() {
 
 void Director::SetScene(Scene *scene) {
     this->scene = scene;
+//    if ((INotificationSubscriber *)this->scene != NULL) {
+//        std::cout << "Subcribing scene to notifications...";
+//        this->NotificationServiceInstance().AddSubscriber((INotificationSubscriber *)this->scene);
+//        ((INotificationSubscriber *)this->scene)->OnNotificationReceived("Hi");
+//    }
 }
 
 void Director::Setup() {    

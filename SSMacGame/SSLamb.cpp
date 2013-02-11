@@ -18,9 +18,23 @@ SSLamb::~SSLamb() {
 
 // Overrides
 void SSLamb::Update(Director &director, int timePassed) {
-    this->SetCenter(SSPointMake(this->GetCenter().x - 0.01f, this->GetCenter().y, 10.0f));
+    this->waitMs -= timePassed;
+    
+    if (this->waitMs <= 0) {
+        this->SetCenter(SSPointMake(this->GetCenter().x - 0.01f, this->GetCenter().y, 10.0f));
+        
+        // detect if this lamb escaped
+        if (this->GetCenter().x < -4.0f) {
+            director.NotificationServiceInstance().SendNotification("LAMB_ESCAPED");
+        }
+    }
 }
 
 void SSLamb::Render() {
     cube.render(this->GetCenter(), 0.4f, SSColorMake(1.0f, 1.0f, 1.0f, 1.0f));
+}
+
+void SSLamb::StartFromLeft(int waitMs) {
+    this->SetCenter(SSPointMake(4.0f, SSRandF(-2.0f, 3.5f), 10.0f));
+    this->waitMs = waitMs;
 }
