@@ -27,7 +27,7 @@ namespace SoftShoe {
             virtual void OnAfterLoad();
                 
             // Scene Graph
-            void Update(Director &director, int timePassed);
+            virtual void Update(Director &director, int timePassed);
             virtual void Render();
             
             void AddActor(Actor *actor);

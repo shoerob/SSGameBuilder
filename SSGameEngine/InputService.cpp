@@ -23,3 +23,13 @@ void InputService::MouseMoved(int x, int y) {
     mouseX = x;
     mouseY = y;
 }
+
+void InputService::MouseDown(int x, int y) {
+    this->MouseMoved(x, y);
+    this->isMouseDown = true;
+}
+
+void InputService::MouseUp(int x, int y) {
+    this->MouseMoved(x, y);
+    this->isMouseDown = false;
+}

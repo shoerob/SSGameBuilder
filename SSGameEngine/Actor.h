@@ -30,7 +30,10 @@ namespace SoftShoe {
             void SetCenter(SSPoint3F center) { this->center = center; };
             SSPoint3F GetCenter() { return this->center; };
             
+            
+            void SetScene(Scene *scene) {this->scene = scene; }; // TODO: hide this somehow...
             Scene *GetScene() { return this->scene; };
+            
             
         protected:
             SSPoint3F center;

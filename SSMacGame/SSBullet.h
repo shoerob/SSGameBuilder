@@ -23,6 +23,7 @@ public:
     
 private:
     Cube cube;
+    
 };
 
 #endif /* defined(__SSMacGame__SSBullet__) */

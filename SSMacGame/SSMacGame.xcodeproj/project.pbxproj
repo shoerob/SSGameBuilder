@@ -19,6 +19,8 @@
 		851ADA7816C5F06F0035932F /* SSGun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 851ADA7616C5F06F0035932F /* SSGun.cpp */; };
 		851ADA7B16C5F26E0035932F /* SSMainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 851ADA7916C5F26E0035932F /* SSMainScene.cpp */; };
 		856AF7BD16C6EEA10073F223 /* SSBullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 856AF7BB16C6EEA10073F223 /* SSBullet.cpp */; };
+		856AF7C316C80A530073F223 /* SSLamb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 856AF7C116C80A530073F223 /* SSLamb.cpp */; };
+		856AF7C816C80E260073F223 /* SSExplosion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 856AF7C616C80E260073F223 /* SSExplosion.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		851ADA7A16C5F26E0035932F /* SSMainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSMainScene.h; sourceTree = "<group>"; };
 		856AF7BB16C6EEA10073F223 /* SSBullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SSBullet.cpp; sourceTree = "<group>"; };
 		856AF7BC16C6EEA10073F223 /* SSBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSBullet.h; sourceTree = "<group>"; };
+		856AF7C116C80A530073F223 /* SSLamb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SSLamb.cpp; sourceTree = "<group>"; };
+		856AF7C216C80A530073F223 /* SSLamb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLamb.h; sourceTree = "<group>"; };
+		856AF7C616C80E260073F223 /* SSExplosion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SSExplosion.cpp; sourceTree = "<group>"; };
+		856AF7C716C80E260073F223 /* SSExplosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSExplosion.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,9 @@
 		851ADA7516C5F05D0035932F /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				856AF7C516C80E170073F223 /* ParticleSystems */,
+				856AF7C116C80A530073F223 /* SSLamb.cpp */,
+				856AF7C216C80A530073F223 /* SSLamb.h */,
 				856AF7BB16C6EEA10073F223 /* SSBullet.cpp */,
 				856AF7BC16C6EEA10073F223 /* SSBullet.h */,
 				851ADA7616C5F06F0035932F /* SSGun.cpp */,
@@ -162,6 +171,15 @@
 				851ADA7A16C5F26E0035932F /* SSMainScene.h */,
 			);
 			name = Game;
+			sourceTree = "<group>";
+		};
+		856AF7C516C80E170073F223 /* ParticleSystems */ = {
+			isa = PBXGroup;
+			children = (
+				856AF7C616C80E260073F223 /* SSExplosion.cpp */,
+				856AF7C716C80E260073F223 /* SSExplosion.h */,
+			);
+			name = ParticleSystems;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +269,8 @@
 				851ADA7816C5F06F0035932F /* SSGun.cpp in Sources */,
 				851ADA7B16C5F26E0035932F /* SSMainScene.cpp in Sources */,
 				856AF7BD16C6EEA10073F223 /* SSBullet.cpp in Sources */,
+				856AF7C316C80A530073F223 /* SSLamb.cpp in Sources */,
+				856AF7C816C80E260073F223 /* SSExplosion.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

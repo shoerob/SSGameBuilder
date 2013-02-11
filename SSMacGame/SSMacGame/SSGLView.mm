@@ -86,4 +86,22 @@ static SoftShoe::GameEngine::Director s_director;
     s_director.InputServiceInstance().MouseMoved(eyeCenter.x * 640.0f / self.bounds.size.width, eyeCenter.y * 480.0f / self.bounds.size.height);
 }
 
+- (void)mouseDown:(NSEvent *)theEvent {
+    NSPoint eyeCenter = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+    NSLog(@"%@", NSStringFromPoint(eyeCenter));
+    s_director.InputServiceInstance().MouseDown(eyeCenter.x * 640.0f / self.bounds.size.width, eyeCenter.y * 480.0f / self.bounds.size.height);
+}
+
+- (void)mouseUp:(NSEvent *)theEvent {
+    NSPoint eyeCenter = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+    NSLog(@"%@", NSStringFromPoint(eyeCenter));
+    s_director.InputServiceInstance().MouseUp(eyeCenter.x * 640.0f / self.bounds.size.width, eyeCenter.y * 480.0f / self.bounds.size.height);
+}
+
+- (void)mouseDragged:(NSEvent *)theEvent {
+    NSPoint eyeCenter = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+    NSLog(@"%@", NSStringFromPoint(eyeCenter));
+    s_director.InputServiceInstance().MouseMoved(eyeCenter.x * 640.0f / self.bounds.size.width, eyeCenter.y * 480.0f / self.bounds.size.height);
+}
+
 @end

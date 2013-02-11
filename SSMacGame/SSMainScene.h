@@ -12,6 +12,8 @@
 #include <iostream>
 #include <SSGameEngine/SSGameEngine.h>
 #include "SSGun.h"
+#include "SSLamb.h"
+#include "SSExplosion.h"
 
 class SSMainScene : public SoftShoe::GameEngine::Scene {
 public:
@@ -19,11 +21,15 @@ public:
     ~SSMainScene();
     
     // Overrides
+    void Update(Director &director, int timePassed);
     void Render();
     
     
 private:
     SSGun gun;
+    SSLamb lamb;
+    SSExplosion explosion;
+    
 };
 
 #endif /* defined(__SSMacGame__MainScene__) */

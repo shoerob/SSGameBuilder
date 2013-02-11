@@ -21,9 +21,12 @@ namespace SoftShoe {
             
             // Mouse Events
             void MouseMoved(int x, int y);
-    
+            void MouseDown(int x, int y);
+            void MouseUp(int x, int y);
+            
             int mouseX;
             int mouseY;
+            bool isMouseDown;
     
         };
         

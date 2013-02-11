@@ -42,9 +42,11 @@ void Scene::Render() {
 }
 
 void Scene::AddActor(Actor *actor) {
+    actor->SetScene(this);
     this->actors.push_back(actor);
 }
 
 void Scene::RemoveActor(Actor *actor) {
+    actor->SetScene(NULL);
     this->actors.remove(actor);
 }
