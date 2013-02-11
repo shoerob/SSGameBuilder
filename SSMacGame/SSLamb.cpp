@@ -18,6 +18,8 @@ SSLamb::~SSLamb() {
 
 // Overrides
 void SSLamb::Update(Director &director, int timePassed) {
+    if (!isActive) return;
+    
     this->waitMs -= timePassed;
     
     if (this->waitMs <= 0) {
@@ -26,6 +28,7 @@ void SSLamb::Update(Director &director, int timePassed) {
         // detect if this lamb escaped
         if (this->GetCenter().x < -4.0f) {
             director.NotificationServiceInstance().SendNotification("LAMB_ESCAPED");
+            isActive = false;
         }
     }
 }
@@ -35,6 +38,7 @@ void SSLamb::Render() {
 }
 
 void SSLamb::StartFromLeft(int waitMs) {
+    this->isActive = true;
     this->SetCenter(SSPointMake(4.0f, SSRandF(-2.0f, 3.5f), 10.0f));
     this->waitMs = waitMs;
 }

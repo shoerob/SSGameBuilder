@@ -49,5 +49,7 @@ void SSMainScene::StartWave1() {
 }
 
 void SSMainScene::OnNotificationReceived(std::string notificationName) {
-    std::cout << "Lamb escaped!!";
+    if (notificationName == "LAMB_ESCAPED") {
+        std::cout << "Lamb escaped!!";
+    }
 }

@@ -26,6 +26,7 @@ public:
     
 private:
     Cube cube;
+    bool isActive = false;
     int waitMs; // amount of time to wait before appearing
     
 };
