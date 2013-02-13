@@ -16,6 +16,9 @@ class SSExplosion : public SoftShoe::GameEngine::ParticleSystem {
 public:
     SSExplosion();
     ~SSExplosion();
+    
+    void Update(Director &director, int timePassed);
+    void Render();
 };
 
 

@@ -9,7 +9,7 @@
 #include "SSBullet.h"
 
 SSBullet::SSBullet() {
-    
+    this->SetCollides(true);
 }
 
 SSBullet::~SSBullet() {
@@ -23,4 +23,9 @@ void SSBullet::Update(Director &director, int timePassed) {
 
 void SSBullet::Render() {
     cube.render(this->GetCenter(), 0.1f, SSColorMake(0.0f, 1.0f, 0.0f, 1.0f));
+}
+
+void SSBullet::CollidedWith(Actor *actor) {
+    this->SetCollides(false);
+    this->SetVisible(false);
 }

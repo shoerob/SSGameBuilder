@@ -25,6 +25,15 @@ SSColorRGBA SSColorMake(float r, float g, float b, float a) {
     return color;
 }
 
+SSRectF SSRectMake(float x, float y, float width, float height) {
+    SSRectF rect;
+    rect.x = x;
+    rect.y = y;
+    rect.width = width;
+    rect.height = height;
+    return rect;
+}
+
 float SSRandF(float LO, float HI) {
     return LO + (float)rand()/((float)RAND_MAX/(HI-LO));
 }

@@ -26,9 +26,19 @@ struct SSColorRGBA {
 };
 typedef struct SSColorRGBA SSColorRGBA;
 
+struct SSRectF {
+    float x;
+    float y;
+    float width;
+    float height;
+};
+typedef struct SSRectF SSRectF;
+
 SSPoint3F SSPointMake(float x, float y, float z);
 
 SSColorRGBA SSColorMake(float r, float g, float b, float a);
+
+SSRectF SSRectMake(float x, float y, float width, float height);
 
 float SSRandF(float LO, float HI);
 

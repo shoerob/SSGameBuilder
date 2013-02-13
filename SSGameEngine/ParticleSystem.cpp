@@ -69,7 +69,9 @@ void ParticleSystem::Render() {
     glPushMatrix();
     for (int i = 0; i < TOTAL_PARTICLES; i++) {
         Particle &p = particles[i];
-        cube.render(p.center, 0.5f, p.color);
+        if (p.life > 0) {
+            cube.render(p.center, 0.5f, p.color);
+        }
     }
     glPopMatrix();
 }

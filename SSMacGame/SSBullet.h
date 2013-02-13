@@ -21,6 +21,10 @@ public:
     void Update(Director &director, int timePassed);
     void Render();
     
+    // Collision
+    SSRectF GetCollisionRect() { return SSRectMake(this->GetCenter().x, this->GetCenter().y, 0.3f, 0.3f); };
+    void CollidedWith(Actor *actor);
+    
 private:
     Cube cube;
     

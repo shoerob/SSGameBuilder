@@ -30,14 +30,27 @@ namespace SoftShoe {
             void SetCenter(SSPoint3F center) { this->center = center; };
             SSPoint3F GetCenter() { return this->center; };
             
-            
-            void SetScene(Scene *scene) {this->scene = scene; }; // TODO: hide this somehow...
+            void SetScene(Scene *scene) { this->scene = scene; }; // TODO: hide this somehow...
             Scene *GetScene() { return this->scene; };
             
+            void SetVisible(bool visible) { this->visible = visible; };
+            bool GetVisible() { return visible; }
+            
+            // Basic 2d collision
+            void SetCollides(bool collides) { this->collides = collides; }
+            bool GetCollides() { return this->collides; }
+            virtual SSRectF GetCollisionRect() { return SSRectMake(0.0f, 0.0f, 0.0f, 0.0f); };
+            virtual void CollidedWith(Actor *actor) { };
+            bool IsCollidingWithActor(Actor *actor);
             
         protected:
             SSPoint3F center;
             Scene *scene;
+            
+            bool visible = true;
+            
+            // basic 2d collision detection
+            bool collides = false;
         };
     }
 }

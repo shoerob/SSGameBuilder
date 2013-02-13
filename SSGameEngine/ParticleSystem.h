@@ -15,7 +15,7 @@
 #include "Cube.h"
 #include "Model.h"
 
-#define TOTAL_PARTICLES 5000
+#define TOTAL_PARTICLES 2000
 
 namespace SoftShoe {
     namespace GameEngine {
@@ -34,13 +34,13 @@ namespace SoftShoe {
             ParticleSystem();
             ~ParticleSystem();
             
-            void Update(Director &director, int timePassed);
-            void Render();
+            virtual void Update(Director &director, int timePassed);
+            virtual void Render();
             
             Cube cube;
             Model model;
             
-        private:
+        protected:
             Particle particles[TOTAL_PARTICLES];
         };
     }

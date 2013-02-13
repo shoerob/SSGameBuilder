@@ -24,10 +24,16 @@ public:
     // Setup
     void StartFromLeft(int waitMs);
     
+    // Collision
+    SSRectF GetCollisionRect() { return SSRectMake(this->GetCenter().x, this->GetCenter().y, 0.3f, 0.3f); };
+    void CollidedWith(Actor *actor);
+    
 private:
     Cube cube;
     bool isActive = false;
     int waitMs; // amount of time to wait before appearing
+    
+    bool isDead = false;
     
 };
 

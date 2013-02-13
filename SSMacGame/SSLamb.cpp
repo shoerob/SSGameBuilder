@@ -7,9 +7,11 @@
 //
 
 #include "SSLamb.h"
+#include "SSBullet.h"
+#include "SSExplosion.h"
 
 SSLamb::SSLamb() {
-    
+    this->SetCollides(true);
 }
 
 SSLamb::~SSLamb() {
@@ -19,6 +21,17 @@ SSLamb::~SSLamb() {
 // Overrides
 void SSLamb::Update(Director &director, int timePassed) {
     if (!isActive) return;
+    
+    // explode!!!
+    if (isDead) {
+        SSExplosion *explosion = new SSExplosion();
+        explosion->SetCenter(SSPointMake(this->GetCenter().x, this->GetCenter().y, this->GetCenter().z));
+        this->GetScene()->AddActor(explosion);
+        
+        
+        isActive = false;
+        return;
+    }
     
     this->waitMs -= timePassed;
     
@@ -41,4 +54,13 @@ void SSLamb::StartFromLeft(int waitMs) {
     this->isActive = true;
     this->SetCenter(SSPointMake(4.0f, SSRandF(-2.0f, 3.5f), 10.0f));
     this->waitMs = waitMs;
+}
+
+void SSLamb::CollidedWith(Actor *actor) {
+    SSBullet *bullet = dynamic_cast<SSBullet *>(actor);
+    if (bullet != NULL) {
+        this->SetCollides(false);
+        this->SetVisible(false);
+        this->isDead = true;
+    }
 }

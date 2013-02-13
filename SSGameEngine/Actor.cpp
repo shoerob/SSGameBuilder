@@ -21,3 +21,19 @@ Actor::Actor() {
 Actor::~Actor() {
     
 }
+
+bool Actor::IsCollidingWithActor(Actor *actor) {
+    SSRectF thisRect = this->GetCollisionRect();
+    SSRectF actorRect = actor->GetCollisionRect();
+    
+    // determine if no collision is occurring
+    if ((thisRect.x > actorRect.x + actorRect.width)  ||
+        (thisRect.x + thisRect.width < actorRect.x)   ||
+        (thisRect.y > actorRect.y + actorRect.height) ||
+        (thisRect.y + thisRect.height < actorRect.y)) {
+        return false;
+    }
+    
+    // collision detected
+    return true;
+}
