@@ -9,7 +9,13 @@
 #ifndef SSGameEngine_SSGameEngine_h
 #define SSGameEngine_SSGameEngine_h
 
+#include <iostream>
 #include "SSCoreTypes.h"
+
+
+
+
+/// OLD
 
 // Systems
 //#include "InputService.h"
@@ -29,5 +35,12 @@
 
 using namespace SoftShoe::Services;
 using namespace SoftShoe::GameEngine;
+
+/// NEW
+
+#include "Engine.h"
+#include "Context.h"
+#include "Scene2.h"
+#include "SceneController.h"
 
 #endif
